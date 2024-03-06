@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Banglore Home Price Prediction</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app.css">
+    <style>
+        body {
+            background-image: url('images (1).jpg'); /* Replace 'background.jpg' with the path to your image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h1 class="text-center">House Price Prediction</h1>
+            <form class="my-form">
+                <div class="form-group">
+                    <label for="uiSqft">Area (Square Feet)</label>
+                    <input class="form-control" type="text" id="uiSqft" name="Squareft" value="1000">
+                </div>
+                <div class="form-group">
+                    <label for="uiBHK">BHK</label>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary active">
+                            <input type="radio" name="uiBHK" value="1" checked> 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="uiBHK" value="2"> 2
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="uiBHK" value="3"> 3
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="uiBHK" value="4"> 4
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="uiBHK" value="5"> 5
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="uiBathrooms">Bathrooms</label>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary active">
+                            <input type="radio" name="uiBathrooms" value="1" checked> 1
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="uiBathrooms" value="2"> 2
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="uiBathrooms" value="3"> 3
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="uiBathrooms" value="4"> 4
+                        </label>
+                        <label class="btn btn-secondary">
+                            <input type="radio" name="uiBathrooms" value="5"> 5
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="uiLocations">Location</label>
+                    <select class="form-control" id="uiLocations">
+                        <option disabled selected>Choose a Location</option>
+                        <option>Electronic City</option>
+                        <option>Rajaji Nagar</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary btn-block" onclick="onClickedEstimatePrice()" type="button">Estimate Price</button>
+            </form>
+            <div id="uiEstimatedPrice" class="text-center mt-3"></div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
